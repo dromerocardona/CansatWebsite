@@ -5,3 +5,11 @@ fetch('menubar.html')
         document.body.insertAdjacentHTML('afterbegin', data);
     });
 //
+
+// Places the footer at the bottom of each page
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.body.insertAdjacentHTML('beforeend', data);
+    });
+//
