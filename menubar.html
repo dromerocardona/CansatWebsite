@@ -1,5 +1,9 @@
 <header class="header">
-  <div class="title">CanSat Competition</div>
+  <div class="logo-container">
+    <img src="assets/logos/CanSatLogo.png" alt="CanSat Logo" class="header-logo">
+    <div class="title">CanSat Competition</div>
+  </div>
+
   <nav class="navbar">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -15,15 +19,8 @@
 
 <style>
 /* Margins and paddings */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
 /* Logo and nav */
 .header {
@@ -36,6 +33,19 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Container to align image and text side-by-side */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Adjusts spacing between image and text */
+}
+
+/* Controls the size of your logo image */
+.header-logo {
+  height: 40px; /* Adjust height to fit your navbar */
+  width: auto;  /* Keeps the image proportion correct */
+}
+
 /* Title styling */
 .title {
   font-size: 1.5rem;
@@ -45,10 +55,10 @@ body {
 
 /* Navigation list */
 .navbar ul {
-  display: flex;
+  display: flex; 
   list-style: none;
   gap: 2rem; /* Spacing between links */
-}
+} 
 
 /* Link styles */
 .navbar a {
@@ -57,7 +67,7 @@ body {
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.3s ease; /* Smooth transition effect */
-}
+} 
 
 /* Hover state */
 .navbar a:hover {
