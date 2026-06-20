@@ -4,6 +4,14 @@
     <div class="title">CanSat Competition</div>
   </div>
 
+  <!-- Dropdown menu for mobile devices -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
   <nav class="navbar">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -18,61 +26,156 @@
 </header>
 
 <style>
-/* Margins and paddings */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Logo and nav */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 0.75rem 5%;
   background-color: #272b6f;
   color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Container to align image and text side-by-side */
+/* Logo */
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 1rem; /* Adjusts spacing between image and text */
+  gap: 0.8rem;
+  flex-shrink: 0;
 }
 
-/* Controls the size of your logo image */
 .header-logo {
-  height: 40px; /* Adjust height to fit your navbar */
-  width: auto;  /* Keeps the image proportion correct */
+  height: 42px;
+  width: auto;
 }
 
-/* Title styling */
 .title {
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-weight: bold;
   letter-spacing: 1px;
+  white-space: nowrap;
 }
 
-/* Navigation list */
-.navbar ul {
-  display: flex; 
-  list-style: none;
-  gap: 2rem; /* Spacing between links */
-} 
+/* Hamburger/dropdown menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
 
-/* Link styles */
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Navigation */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+  align-items: center;
+}
+
 .navbar a {
   color: #cccccc;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.02rem;
   font-weight: 500;
-  transition: color 0.3s ease; /* Smooth transition effect */
-} 
+  transition: all 0.3s ease;
+  padding: 0.2rem 0;
+  white-space: nowrap;
+}
 
-/* Hover state */
 .navbar a:hover {
   color: #ffffff;
-  border-bottom: 2px solid #3498db; /* Blue accent line under hovered items */
-  padding-bottom: 4px;
+  border-bottom: 2px solid #3498db;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* ----- RESPONSIVE STYLING ----- */
+
+@media (max-width: 1012px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #272b6f;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  .navbar li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .navbar a {
+    display: block;
+    padding: 0.9rem 0;
+    font-size: 1.1rem;
+  }
+
+  /* Show menu when checked */
+  .nav-toggle:checked ~ .navbar {
+    display: flex;
+  }
+
+  /* Hamburger animation */
+  .nav-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .nav-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.7rem 4%;
+  }
+  
+  .header-logo {
+    height: 36px;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+  }
 }
 </style>
