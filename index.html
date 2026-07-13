@@ -1,19 +1,185 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CanSat Competition</title>
-    <link rel="icon" type="image/png" href="assets/logos/CanSatLogo.png">
-</head>
+    <link rel="icon" type="image/png" href="assets/logos/CanSatLogo.png" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@500;600&display=swap");
 
-<body>
-    <section id="introduction">
-        
+      .hero {
+        height: 50vh;
+        min-height: 200px;
+        background:
+          linear-gradient(rgba(10, 37, 64, 0.75), rgba(10, 37, 64, 0.85)),
+          url("assets/photos/CanSat_BG.JPG") center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+      }
+
+      .hero-content {
+        max-width: 800px;
+        padding: 2rem;
+      }
+
+      .hero h1 {
+        font-size: 4.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      .hero p {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+      }
+
+      .btn {
+        display: inline-block;
+        background: #00b4d8;
+        color: white;
+        padding: 14px 36px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background: #0099b8;
+        transform: translateY(-3px);
+      }
+
+      #introduction {
+        background: white;
+        padding: 3rem 5%;
+        text-align: center;
+      }
+
+      #donation {
+        padding: 100px 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>CanSat Competition</h1>
+        <p>Student design-build-launch competition.</p>
+      </div>
     </section>
-</body>
 
+    <!-- Introduction -->
+    <section id="introduction">
+      <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 2rem">
+        Welcome to CanSat
+      </h2>
+      <div
+        class="intro-text"
+        style="
+          max-width: 1000px;
+          margin: 0 auto;
+          font-size: 1.25rem;
+          text-align: center;
+        "
+      >
+        <p>
+          The American Astronautical Society (AAS) has organized an annual
+          student design-build-launch competition for space-related topics.
+          Although similar competitions exist for other fields of engineering
+          (robots, radio-control airplanes, racing cars, etc.), most
+          space-related competitions are paper design competitions. While these
+          are worthwhile, they do not give students the satisfaction of being
+          involved with the end-to-end life cycle of a complex engineering
+          project, from conceptual design, through integration and test, actual
+          operation of the system and concluding with a post-mission summary and
+          debrief. This competition fulfills that need!
+        </p>
+        <p>
+          This annual competition is open to teams from universities and
+          colleges. Teams must be able to design and build a space-type system,
+          following the approved competition guide, and then compete against
+          each at the end of two semesters to determine the winners. Rockets
+          will be provided but teams are responsible for funding the
+          construction of their CanSat and all travel/lodging expenses.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mark Walker Donation Fund Section -->
+    <section
+      id="donation"
+      style="
+        background: linear-gradient(135deg, #0a2540, #1e3a5f);
+        color: white;
+        text-align: center;
+        padding: 100px 5%;
+      "
+    >
+      <div
+        style="
+          max-width: 1000px;
+          margin: 0 auto;
+          background: rgba(255, 255, 255, 0.1);
+          padding: 3rem 2rem;
+          border-radius: 20px;
+          backdrop-filter: blur(10px);
+        "
+      >
+        <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem">
+          In Memory of Mark Walker
+        </h2>
+        <div style="text-align: center; margin: 2rem 0">
+          <img
+            src="assets/photos/markwalker.jpg"
+            alt="Mark Walker"
+            style="
+              max-width: 100%;
+              height: auto;
+              border-radius: 12px;
+              box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            "
+          />
+        </div>
+        <p style="font-size: 1.3rem; margin-bottom: 2rem">
+          We are sad to announce the passing of Mark Walker, a dedicated leader
+          and volunteer at the AAS CanSat Competition for more than 15 years.
+          Mark always brought amazing energy and enthusiasm to the event, and
+          his excitement in helping to bring out the best in the student
+          competitors was inspiring. We will all miss Mark tremendously.
+        </p>
+        <p style="font-size: 1.2rem; margin-bottom: 2.5rem">
+          Per his wishes, AAS has set up a fund in Mark's name to help support
+          the CanSat Competition. Please consider any donation you can to
+          remember Mark and this event he loved and helped build. Thank you.
+        </p>
+
+        <a
+          href="https://www.paypal.com/donate/?hosted_button_id=H9FWCJJDCDAHG"
+          target="_blank"
+          class="btn"
+          style="
+            background: #00b4d8;
+            font-size: 1.3rem;
+            padding: 18px 48px;
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border-radius: 50px;
+          "
+        >
+          Donate to the Fund
+        </a>
+      </div>
+    </section>
+  </body>
 </html>
 
 <script src="scripts.js"></script>
