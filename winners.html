@@ -1,8 +1,427 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Winners</title>
-    <link rel="icon" type="image/png" href="assets/logos/CanSatLogo.png">
-</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Winners - CanSat Competition</title>
+    <link rel="icon" type="image/png" href="assets/logos/CanSatLogo.png" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@500;600&display=swap");
+
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      .page-header {
+        background: linear-gradient(135deg, #0a2540, #1e3a5f);
+        color: white;
+        text-align: center;
+        padding: 80px 5% 60px;
+      }
+
+      .page-header h1 {
+        font-size: 3.2rem;
+        margin: 0 0 1rem;
+      }
+
+      .page-header p {
+        font-size: 1.35rem;
+        max-width: 700px;
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+
+      .year-section {
+        padding: 80px 5%;
+      }
+
+      .year-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .year-header h2 {
+        font-size: 2.8rem;
+        color: #0a2540;
+        margin-bottom: 0.5rem;
+      }
+
+      .year-header .divider {
+        width: 80px;
+        height: 4px;
+        background: #00b4d8;
+        margin: 0 auto;
+      }
+
+      .year-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: flex-start;
+      }
+
+      .scoresheet {
+        flex: 1 1 480px;
+        min-width: 300px;
+      }
+
+      .scoresheet img {
+        width: 75%;
+        height: auto;
+        border-radius: 16px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+      }
+
+      .teams-list {
+        flex: 1 1 520px;
+        min-width: 320px;
+      }
+
+      .team-row {
+        display: flex;
+        align-items: center;
+        padding: 1.1rem 1.4rem;
+        background: #f8f9fa;
+        border-radius: 12px;
+        margin-bottom: 12px;
+        transition: all 0.2s ease;
+      }
+
+      .team-row:hover {
+        background: #eef4f8;
+        transform: translateX(8px);
+      }
+
+      .rank {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.35rem;
+        font-weight: 700;
+        background: #1e3a5f;
+        color: white;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-right: 1.2rem;
+      }
+
+      .team-info {
+        flex: 1;
+      }
+
+      .team-name {
+        font-size: 1.35rem;
+        font-weight: 600;
+        color: #0a2540;
+        margin: 0;
+      }
+
+      .university {
+        font-size: 1.05rem;
+        color: #555;
+        margin: 4px 0 0;
+      }
+
+      .score {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: #1e3a5f;
+        margin-left: 1rem;
+        flex-shrink: 0;
+      }
+
+      .gold {
+        background: #f5c800;
+        color: #0a2540;
+      }
+      .silver {
+        background: #aaaaaa;
+        color: #0a2540;
+      }
+      .bronze {
+        background: #ec9640;
+        color: white;
+      }
+
+      .award-note {
+        margin-top: 2rem;
+        padding: 1rem 1.4rem;
+        background: #f0f8ff;
+        border-left: 5px solid #00b4d8;
+        border-radius: 8px;
+        font-style: italic;
+      }
+
+      @media (max-width: 900px) {
+        .year-content {
+          flex-direction: column;
+        }
+        .scoresheet img {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1>Competition Winners</h1>
+    </header>
+
+    <!-- 2026 -->
+    <section class="year-section" style="background: #f8fafc">
+      <div class="year-header">
+        <h2>2026 Winners</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="year-content">
+        <div class="scoresheet">
+          <img
+            src="assets/docs/2026/Rankings_2026.png"
+            alt="2026 Full Scoresheet"
+          />
+        </div>
+        <div class="teams-list">
+          <div class="team-row">
+            <div class="rank gold">1</div>
+            <div class="team-info">
+              <div class="team-name">Daedalus</div>
+              <div class="university">Thailand</div>
+            </div>
+            <div class="score">93.0778</div>
+          </div>
+          <div class="team-row">
+            <div class="rank silver">2</div>
+            <div class="team-info">
+              <div class="team-name">Vortex</div>
+              <div class="university">
+                University of Alabama in Huntsville, USA
+              </div>
+            </div>
+            <div class="score">92.7877</div>
+          </div>
+          <div class="team-row">
+            <div class="rank bronze">3</div>
+            <div class="team-info">
+              <div class="team-name">Bamantara EEPISAT</div>
+              <div class="university">Indonesia</div>
+            </div>
+            <div class="score">91.5926</div>
+          </div>
+          <div class="team-row">
+            <div class="rank">4</div>
+            <div class="team-info">
+              <div class="team-name">MetalHawk</div>
+              <div class="university">
+                University of Alabama in Huntsville, USA
+              </div>
+            </div>
+            <div class="score">90.2816</div>
+          </div>
+          <div class="team-row">
+            <div class="rank">5</div>
+            <div class="team-info">
+              <div class="team-name">SEDS ITBA</div>
+              <div class="university">Argentina</div>
+            </div>
+            <div class="score">86.1917</div>
+          </div>
+
+          <div class="award-note">
+            <strong>Mark Walker Memory Ground Station Award Winner:</strong>
+            Team DJS Arya (India)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2025 -->
+    <section class="year-section">
+      <div class="year-header">
+        <h2>2025 Winners</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="year-content">
+        <div class="scoresheet">
+          <img
+            src="assets/docs/2025/Rankings_2025.png"
+            alt="2025 Full Scoresheet"
+          />
+        </div>
+        <div class="teams-list">
+          <div class="team-row">
+            <div class="rank gold">1</div>
+            <div class="team-info">
+              <div class="team-name">SEDS ITBA</div>
+              <div class="university">Argentina</div>
+            </div>
+            <div class="score">97.98281</div>
+          </div>
+          <div class="team-row">
+            <div class="rank silver">2</div>
+            <div class="team-info">
+              <div class="team-name">APASTRON</div>
+              <div class="university">Turkey</div>
+            </div>
+            <div class="score">96.95351</div>
+          </div>
+          <div class="team-row">
+            <div class="rank bronze">3</div>
+            <div class="team-info">
+              <div class="team-name">Gemini Supernova</div>
+              <div class="university">Taiwan</div>
+            </div>
+            <div class="score">96.90420</div>
+          </div>
+          <div class="team-row">
+            <div class="rank">4</div>
+            <div class="team-info">
+              <div class="team-name">CanBEE</div>
+              <div class="university">Turkey</div>
+            </div>
+            <div class="score">95.89421</div>
+          </div>
+          <div class="team-row">
+            <div class="rank">5</div>
+            <div class="team-info">
+              <div class="team-name">RSX UofT</div>
+              <div class="university">Canada</div>
+            </div>
+            <div class="score">95.87725</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2024 -->
+    <section class="year-section" style="background: #f8fafc">
+      <div class="year-header">
+        <h2>2024 Winners</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="year-content">
+        <div class="scoresheet">
+          <img
+            src="assets/docs/2024/Rankings_2024.png"
+            alt="2024 Full Scoresheet"
+          />
+        </div>
+        <div class="teams-list">
+          <div class="team-row">
+            <div class="rank gold">1</div>
+            <div class="team-info">
+              <div class="team-name">PWr Aerospace</div>
+              <div class="university">Poland</div>
+            </div>
+            <div class="score">99.8559</div>
+          </div>
+          <div class="team-row">
+            <div class="rank silver">2</div>
+            <div class="team-info">
+              <div class="team-name">Shockwave</div>
+              <div class="university">UAH, United States</div>
+            </div>
+            <div class="score">99.5227</div>
+          </div>
+          <div class="team-row">
+            <div class="rank bronze">3</div>
+            <div class="team-info">
+              <div class="team-name">KoNaR Can</div>
+              <div class="university">Poland</div>
+            </div>
+            <div class="score">99.4271</div>
+          </div>
+          <div class="team-row">
+            <div class="rank">4</div>
+            <div class="team-info">
+              <div class="team-name">UCI CanSat</div>
+              <div class="university">UCI, United States</div>
+            </div>
+            <div class="score">99.1401</div>
+          </div>
+          <div class="team-row">
+            <div class="rank">5</div>
+            <div class="team-info">
+              <div class="team-name">SEDS ITBA</div>
+              <div class="university">Argentina</div>
+            </div>
+            <div class="score">99.1059</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2023 -->
+    <section class="year-section">
+      <div class="year-header">
+        <h2>2023 Winners</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="year-content">
+        <div class="scoresheet">
+          <img
+            src="assets/docs/2023/Rankings_2023.png"
+            alt="2023 Full Scoresheet"
+          />
+        </div>
+        <div class="teams-list">
+          <div class="team-row">
+            <div class="rank gold">1</div>
+            <div class="team-info">
+              <div class="team-name">Afterburner</div>
+              <div class="university">UAH, United States</div>
+            </div>
+            <div class="score">100.79</div>
+          </div>
+          <div class="team-row">
+            <div class="rank silver">2</div>
+            <div class="team-info">
+              <div class="team-name">METUOR SPACE</div>
+              <div class="university">Turkey</div>
+            </div>
+            <div class="score">98.24</div>
+          </div>
+          <div class="team-row">
+            <div class="rank bronze">3</div>
+            <div class="team-info">
+              <div class="team-name">Bamantara EEPISAT</div>
+              <div class="university">Indonesia</div>
+            </div>
+            <div class="score">96.75</div>
+          </div>
+          <div class="team-row">
+            <div class="rank">4</div>
+            <div class="team-info">
+              <div class="team-name">PWr Aerospace</div>
+              <div class="university">Poland</div>
+            </div>
+            <div class="score">96.52</div>
+          </div>
+          <div class="team-row">
+            <div class="rank">5</div>
+            <div class="team-info">
+              <div class="team-name">Obsidian</div>
+              <div class="university">UAH, United States</div>
+            </div>
+            <div class="score">91.57</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
 
 <script src="scripts.js"></script>
