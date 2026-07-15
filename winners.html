@@ -165,12 +165,56 @@
         font-style: italic;
       }
 
+      .team-buttons {
+        display: flex;
+        gap: 0.8rem;
+        margin-top: 0.8rem;
+        padding-left: 68px; /* Align with team info */
+      }
+
+      .btn {
+        padding: 0.65rem 1.3rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.2s ease;
+      }
+
+      .btn-pdr {
+        background: #00b4d8;
+        color: white;
+      }
+
+      .btn-pdr:hover {
+        background: #0099b8;
+        transform: translateY(-2px);
+      }
+
+      .btn-cdr {
+        background: #1e3a5f;
+        color: white;
+      }
+
+      .btn-cdr:hover {
+        background: #132a4a;
+        transform: translateY(-2px);
+      }
+
       @media (max-width: 900px) {
         .year-content {
           flex-direction: column;
         }
         .scoresheet img {
           max-width: 100%;
+        }
+        .team-buttons {
+          padding-left: 0;
+          justify-content: center;
         }
       }
     </style>
@@ -195,6 +239,8 @@
           />
         </div>
         <div class="teams-list">
+
+          <!-- 1st Place -->
           <div class="team-row">
             <div class="rank gold">1</div>
             <div class="team-info">
@@ -203,16 +249,26 @@
             </div>
             <div class="score">93.0778</div>
           </div>
+          <div class="team-buttons">
+            <a href="assets/docs/2026/cansat2026_1043_pdr_v07.pdf" class="btn btn-pdr" target="_blank">PDR</a>
+            <a href="assets/docs/2026/cansat2026_1043_cdr_v07.pdf" class="btn btn-cdr" target="_blank">CDR</a>
+          </div>
+
+          <!-- 2nd Place -->
           <div class="team-row">
             <div class="rank silver">2</div>
             <div class="team-info">
               <div class="team-name">Vortex</div>
-              <div class="university">
-                University of Alabama in Huntsville, USA
-              </div>
+              <div class="university">University of Alabama in Huntsville, USA</div>
             </div>
             <div class="score">92.7877</div>
           </div>
+          <div class="team-buttons">
+            <a href="assets/docs/2026/cansat2026_1093_pdr_v02.pdf" class="btn btn-pdr" target="_blank">PDR</a>
+            <a href="assets/docs/2026/cansat2026_1093_cdr_v02.pdf" class="btn btn-cdr" target="_blank">CDR</a>
+          </div>
+
+          <!-- 3rd Place -->
           <div class="team-row">
             <div class="rank bronze">3</div>
             <div class="team-info">
@@ -221,16 +277,26 @@
             </div>
             <div class="score">91.5926</div>
           </div>
+          <div class="team-buttons">
+            <a href="assets/docs/2026/Cansat2026_1064_pdr_v01.pdf" class="btn btn-pdr" target="_blank">PDR</a>
+            <a href="assets/docs/2026/Cansat2026_1064_cdr_v01.pdf" class="btn btn-cdr" target="_blank">CDR</a>
+          </div>
+
+          <!-- 4th Place -->
           <div class="team-row">
             <div class="rank">4</div>
             <div class="team-info">
               <div class="team-name">MetalHawk</div>
-              <div class="university">
-                University of Alabama in Huntsville, USA
-              </div>
+              <div class="university">University of Alabama in Huntsville, USA</div>
             </div>
             <div class="score">90.2816</div>
           </div>
+          <div class="team-buttons">
+            <a href="assets/docs/2026/Cansat2026_1094_pdr_v02.pdf" class="btn btn-pdr" target="_blank">PDR</a>
+            <a href="assets/docs/2026/Cansat2026_1094_cdr_v02.pdf" class="btn btn-cdr" target="_blank">CDR</a>
+          </div>
+
+          <!-- 5th Place -->
           <div class="team-row">
             <div class="rank">5</div>
             <div class="team-info">
@@ -238,6 +304,10 @@
               <div class="university">Argentina</div>
             </div>
             <div class="score">86.1917</div>
+          </div>
+          <div class="team-buttons">
+            <a href="assets/docs/2026/Cansat2026_1081_pdr_v02.pdf" class="btn btn-pdr" target="_blank">PDR</a>
+            <a href="assets/docs/2026/Cansat2026_1081_cdr_v01.pdf" class="btn btn-cdr" target="_blank">CDR</a>
           </div>
 
           <div class="award-note">
