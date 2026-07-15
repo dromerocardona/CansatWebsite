@@ -1,8 +1,254 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sponsors</title>
-    <link rel="icon" type="image/png" href="assets/logos/CanSatLogo.png">
-</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sponsors - CanSat Competition</title>
+    <link rel="icon" type="image/png" href="assets/logos/CanSatLogo.png" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&display=swap");
+
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .heading {
+        background: #0a2540;
+        color: white;
+        padding: 3rem 5%;
+        text-align: center;
+      }
+
+      .heading h1 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 3.5rem;
+        margin: 0 0 1rem 0;
+      }
+
+      .heading p {
+        font-size: 1.35rem;
+        max-width: 700px;
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+
+      .sponsors-section {
+        padding: 5rem 5%;
+        background: white;
+      }
+
+      /* Added concept of tiers in case needed later */
+      .tier {
+        margin-bottom: 4.5rem;
+      }
+
+      .tier h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        color: #0a2540;
+        position: relative;
+      }
+
+      .tier h2:after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 3px;
+        background: #00b4d8;
+        margin: 12px auto 0;
+      }
+
+      .sponsor-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .sponsor-card {
+        background: #f8f9fa;
+        border-radius: 16px;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .sponsor-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      .logo-placeholder {
+        width: 100%;
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border-radius: 12px;
+        margin-bottom: 1.2rem;
+        border: 2px dashed #ddd;
+        overflow: hidden;
+      }
+
+      .logo-placeholder img {
+        max-width: 85%;
+        max-height: 110px;
+        object-fit: contain;
+      }
+
+      .sponsor-name {
+        font-weight: 600;
+        font-size: 1.15rem;
+        color: #0a2540;
+      }
+
+      .sponsor-level {
+        font-size: 0.95rem;
+        color: #00b4d8;
+        margin-top: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .thank-you {
+        background: linear-gradient(135deg, #0a2540, #1e3a5f);
+        color: white;
+        padding: 4rem 5%;
+        text-align: center;
+      }
+
+      .thank-you h2 {
+        font-size: 2.6rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .btn {
+        display: inline-block;
+        background: #00b4d8;
+        color: white;
+        padding: 14px 36px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+      }
+
+      .btn:hover {
+        background: #0099b8;
+        transform: translateY(-3px);
+      }
+
+      @media (max-width: 768px) {
+        .heading h1 {
+          font-size: 2.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>Our Sponsors</h1>
+      <p>
+        Thank you to the organizations and companies that make the CanSat
+        Competition possible
+      </p>
+    </div>
+
+    <div class="sponsors-section">
+      <div class="tier">
+        <h2>Sponsors</h2>
+        <div class="sponsor-grid">
+          <!-- Add more sponsor cards here -->
+          <div class="sponsor-card">
+            <div class="logo-placeholder">
+              <img src="assets/logos/AASLogo.png" alt="AAS Logo" />
+            </div>
+            <div class="sponsor-name">American Astronautical Society</div>
+          </div>
+
+          <div class="sponsor-card">
+            <div class="logo-placeholder">
+              <img src="assets/logos/NASALogo.png" alt="NASA Logo" />
+            </div>
+            <div class="sponsor-name">NASA</div>
+          </div>
+
+          <div class="sponsor-card">
+            <div class="logo-placeholder">
+              <img src="assets/logos/SiemensLogo.png" alt="Siemens Logo" />
+            </div>
+            <div class="sponsor-name">Siemens</div>
+          </div>
+        </div>
+        <div class="sponsor-grid">
+          <div class="sponsor-card">
+            <div class="logo-placeholder">
+              <img src="assets/logos/PraxisLogo.png" alt="Praxis Logo" />
+            </div>
+            <div class="sponsor-name">Praxis</div>
+          </div>
+
+          <div class="sponsor-card">
+            <div class="logo-placeholder">
+              <img src="assets/logos/KratosLogo.png" alt="Kratos Logo" />
+            </div>
+            <div class="sponsor-name">Kratos</div>
+          </div>
+
+          <div class="sponsor-card">
+            <div class="logo-placeholder">
+              <img src="assets/logos/SSAILogo.png" alt="SSAI Logo" />
+            </div>
+            <div class="sponsor-name">SSAI</div>
+          </div>
+        </div>
+        <div class="sponsor-grid">
+          <div class="sponsor-card">
+            <div class="logo-placeholder">
+              <img src="assets/logos/VASTLogo.png" alt="VAST Logo" />
+            </div>
+            <div class="sponsor-name">VAST</div>
+          </div>
+
+          <div class="sponsor-card">
+            <div class="logo-placeholder">
+              <img src="assets/logos/VirginiaSpaceportAuthorityLogo.png" alt="Virginia Spaceport Authority Logo" />
+            </div>
+            <div class="sponsor-name">Virginia Spaceport Authority</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thank You / Become a Sponsor -->
+    <section class="thank-you">
+      <h2>Become a Sponsor</h2>
+      <p
+        style="
+          max-width: 700px;
+          margin: 0 auto 2rem;
+          font-size: 1.25rem;
+          opacity: 0.95;
+        "
+      >
+        Join these incredible organizations in supporting the next generation of
+        aerospace engineers.
+      </p>
+      <a href="contact.html" class="btn"
+        >Contact Us About Sponsorship</a
+      >
+    </section>
+  </body>
+</html>
 
 <script src="scripts.js"></script>
