@@ -1,8 +1,357 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mission</title>
-    <link rel="icon" type="image/png" href="assets/logos/CanSatLogo.png">
-</head>
-    
+    <link rel="icon" type="image/png" href="assets/logos/CanSatLogo.png" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@500;600&display=swap");
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .page-header {
+      background: linear-gradient(135deg, #0a2540, #1e3a5f);
+      color: white;
+      text-align: center;
+      padding: 80px 5% 60px;
+    }
+
+    .page-header h1 {
+      font-size: 3.2rem;
+      margin: 0 0 1rem;
+    }
+
+    .page-header p {
+      font-size: 1.35rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.5;
+    }
+
+    #mission {
+      background: white;
+      padding: 3rem 5%;
+      text-align: left;
+    }
+
+    #mission p {
+      font-size: 1.4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .resources {
+      background: linear-gradient(135deg, #0a2540, #1e3a5f);
+      padding: 4rem 5%;
+      color: white;
+    }
+
+    .resources h2 {
+      color: white;
+      font-size: 2.2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .resource-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .resource-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+
+    .resource-card h3 {
+      margin: 0 0 0.75rem;
+      font-size: 1.35rem;
+      color: #fff;
+    }
+
+    .resource-card p {
+      margin: 0 0 1.5rem;
+      opacity: 0.85;
+      font-size: 1.05rem;
+    }
+
+    .resource-card a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #4fc3f7;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .resource-card a:hover {
+      color: #81d4fa;
+      text-decoration: underline;
+    }
+
+    .download-icon {
+      font-size: 1.3rem;
+    }
+  </style>
+  <body>
+    <!-- Mission -->
+    <section>
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Mission</h1>
+        <p>Updated: Jan 19 2026 for CanSat 2026</p>
+      </div>
+      <div id="mission">
+        <p>
+          Design a Cansat that consists of a payload and a container that mounts
+          on top of the rocket. The payload rests inside the container at launch
+          and includes the nose cone as part of the payload.
+        </p>
+        <p>
+          The container with the payload shall deploy from the rocket when the
+          rocket reaches peak altitude and the rocket motor ejection forces a
+          separation. The container with the payload shall descend at a rate of
+          no more than 15 meters/second using a parachute that automatically
+          deploys at separation.
+        </p>
+        <p>
+          At 80% peak altitude, the payload shall separate from the container
+          and descend using a para-glider descent control system until landing.
+          The descent rate shall be an average of 5 meters/second. The payload
+          shall steer toward a specified position to deposit an instrument. At 2
+          meters above the ground, the instrument shall be released and land
+          intact.
+        </p>
+        <p>
+          A video camera shall show the separation of the payload from the
+          container and the para-glider descent control system functioning. A
+          second video camera shall be pointing downwards and show the ground
+          during descent and the instrument being released. The instrument will
+          be simulated using a large hens egg with a mass ranging from 54 grams
+          to 64 grams.
+        </p>
+        <p>
+          The Cansat shall collect sensor data during ascent and descent and
+          transmit the data to a ground station at a 1 Hz rate. The sensor data
+          shall include interior temperature, battery voltage, battery current,
+          altitude, tilt angle, rotation rate, and GPS position.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission resources -->
+    <section>
+      <div class="resources">
+        <h2>Mission Resources</h2>
+
+        <div class="resources-grid">
+          <div class="resource-card">
+            <h3>Guidance for Success</h3>
+            <p>Cansat Design and Construction Guide</p>
+            <a
+              href="assets/docs/competition/cansat_construction.pdf"
+              target="_blank"
+            >
+              <span class="download-icon">↓</span> Download PDF
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Competition Mission Guide 2026</h3>
+            <p>Updated 12/5/2025</p>
+            <a
+              href="assets/docs/competition/CanSat_Mission_Guide_2026g.pdf"
+              target="_blank"
+            >
+              <span class="download-icon">↓</span> Download PDF
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>PDR Template v1.3</h3>
+            <p>Preliminary Design Review template (Updated 1/19/2026)</p>
+            <a
+              href="assets/docs/competition/Cansat 2026 PDR Outline v1.3.pptx"
+              target="_blank"
+            >
+              <span class="download-icon">↓</span> Download PPTX
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>CDR Template v1.1</h3>
+            <p>Critical Design Review template (Updated 3/11/2026).</p>
+            <a
+              href="assets/docs/competition/Cansat 2026 CDR Outline v1.1.pptx"
+              target="_blank"
+            >
+              <span class="download-icon">↓</span> Download PPTX
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Environmental Test Template</h3>
+            <p>Template and guidelines for environmental testing.</p>
+            <a
+              href="assets/docs/competition/Environmental Test Document Template.pptx"
+              target="_blank"
+            >
+              <span class="download-icon">↓</span> Download PPTX
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>2026 Competition Score Sheet</h3>
+            <p>Updated 5/11/2026 — Official scoring criteria.</p>
+            <a
+              href="assets/docs/competition/Scoresheet 2026.xlsx"
+              target="_blank"
+            >
+              <span class="download-icon">↓</span> Download XLSX
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Sample Simulation Mode Data File</h3>
+            <p>Example telemetry data file for testing.</p>
+            <a
+              href="assets/docs/competition/cansat_2023_simp.txt"
+              target="_blank"
+            >
+              <span class="download-icon">↓</span> Download CSV
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Mission Operations Manual</h3>
+            <p>Template for documenting mission operations procedures.</p>
+            <a
+              href="assets/docs/competition/mission_operations_manual_2019.doc"
+              target="_blank"
+            >
+              <span class="download-icon">↓</span> Download DOC
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Open Rocket CanSat Model</h3>
+            <p>Updated 12/30/2025.</p>
+            <a href="assets/docs/competition/cansat2026.ork" target="_blank">
+              <span class="download-icon">↓</span> Download .ork
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Open Rocket Software</h3>
+            <p>Download the latest version of OpenRocket.</p>
+            <a href="https://openrocket.info/" target="_blank">
+              <span class="download-icon">↓</span> Visit Website
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>CanSat Container Step File</h3>
+            <p>Updated 12/30/2025.</p>
+            <a
+              href="assets/docs/competition/cansat_2026-container.step"
+              target="_blank"
+            >
+              <span class="download-icon">↓</span> Download STEP
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>CanSat Rocket</h3>
+            <p>Picture of rocket used in the competition.</p>
+            <a href="assets/docs/competition/loaded_rocket.jpg" target="_blank">
+              <span class="download-icon">↓</span> Download JPG
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Ground Station Competition Document</h3>
+            <p>Optional reference for ground station development.</p>
+            <a
+              href="assets/docs/competition/Mark Walker Portable Ground Station Design Award.pdf"
+              target="_blank"
+            >
+              <span class="download-icon">↓</span> Download PDF
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Field Layout and Drop Zone Map</h3>
+            <p>Competition field layout and drop zone location.</p>
+            <a
+              href="https://earth.google.com/web/@38.37874495,-79.60928465,812.05523779a,1219.86307685d,30.00000009y,0h,0t,0r/data=CgRCAggBMikKJwolCiExM3Fxd3NCUkNVYmpLcE9FTkY3dHZ4d2p0RWRTMThBdVcgAToDCgEwQgIIAEoHCNXGvR4QAQ"
+              target="_blank"
+            >
+              <span class="download-icon">↓</span> Go to Google Earth
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Flight Readiness Review Score Sheet</h3>
+            <p>FRR scoring criteria.</p>
+            <a
+              href="assets/docs/competition/FRR.pdf"
+              target="_blank"
+            >
+              <span class="download-icon">↓</span> Download PDF
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Ground Station Score Sheet</h3>
+            <p>Scoring for ground station.</p>
+            <a
+              href="assets/docs/competition/Ground Station Scoresheet.pdf"
+              target="_blank"
+            >
+              <span class="download-icon">↓</span> Download PDF
+            </a>
+          </div>
+
+          <div class="resource-card">
+            <h3>CSV Data Score Sheet</h3>
+            <p>Telemetry data formatting and scoring guidelines.</p>
+            <a href="assets/docs/competition/CSV Data Score Sheet.pdf" target="_blank">
+              <span class="download-icon">↓</span> Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
 <script src="scripts.js"></script>
