@@ -47,12 +47,38 @@
       text-align: left;
     }
 
-    #mission p {
-      font-size: 1.4rem;
-      max-width: 1200px;
+    .mission-container {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
+      gap: 2rem;
+      align-items: start;
+      max-width: 1500px;
       margin: 0 auto;
+    }
+
+    .mission-text p {
+      font-size: 1rem;
+      max-width: 1200px;
+      margin: 0 0 1.5rem;
       line-height: 1.8;
-      margin-bottom: 1.5rem;
+    }
+
+    .mission-image {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .mission-container {
+        grid-template-columns: 1fr;
+      }
+      .mission-image {
+        max-height: 360px;
+      }
     }
 
     .resources {
@@ -131,40 +157,50 @@
         <p>Updated: Jan 19 2026 for CanSat 2026</p>
       </div>
       <div id="mission">
-        <p>
-          Design a Cansat that consists of a payload and a container that mounts
-          on top of the rocket. The payload rests inside the container at launch
-          and includes the nose cone as part of the payload.
-        </p>
-        <p>
-          The container with the payload shall deploy from the rocket when the
-          rocket reaches peak altitude and the rocket motor ejection forces a
-          separation. The container with the payload shall descend at a rate of
-          no more than 15 meters/second using a parachute that automatically
-          deploys at separation.
-        </p>
-        <p>
-          At 80% peak altitude, the payload shall separate from the container
-          and descend using a para-glider descent control system until landing.
-          The descent rate shall be an average of 5 meters/second. The payload
-          shall steer toward a specified position to deposit an instrument. At 2
-          meters above the ground, the instrument shall be released and land
-          intact.
-        </p>
-        <p>
-          A video camera shall show the separation of the payload from the
-          container and the para-glider descent control system functioning. A
-          second video camera shall be pointing downwards and show the ground
-          during descent and the instrument being released. The instrument will
-          be simulated using a large hens egg with a mass ranging from 54 grams
-          to 64 grams.
-        </p>
-        <p>
-          The Cansat shall collect sensor data during ascent and descent and
-          transmit the data to a ground station at a 1 Hz rate. The sensor data
-          shall include interior temperature, battery voltage, battery current,
-          altitude, tilt angle, rotation rate, and GPS position.
-        </p>
+        <div class="mission-container">
+          <img
+            class="mission-image"
+            src="assets/photos/mission.jpg"
+            alt="Mission"
+          />
+          <div class="mission-text">
+            <p>
+              Design a Cansat that consists of a payload and a container that
+              mounts on top of the rocket. The payload rests inside the
+              container at launch and includes the nose cone as part of the
+              payload.
+            </p>
+            <p>
+              The container with the payload shall deploy from the rocket when
+              the rocket reaches peak altitude and the rocket motor ejection
+              forces a separation. The container with the payload shall descend
+              at a rate of no more than 15 meters/second using a parachute that
+              automatically deploys at separation.
+            </p>
+            <p>
+              At 80% peak altitude, the payload shall separate from the
+              container and descend using a para-glider descent control system
+              until landing. The descent rate shall be an average of 5
+              meters/second. The payload shall steer toward a specified position
+              to deposit an instrument. At 2 meters above the ground, the
+              instrument shall be released and land intact.
+            </p>
+            <p>
+              A video camera shall show the separation of the payload from the
+              container and the para-glider descent control system functioning.
+              A second video camera shall be pointing downwards and show the
+              ground during descent and the instrument being released. The
+              instrument will be simulated using a large hens egg with a mass
+              ranging from 54 grams to 64 grams.
+            </p>
+            <p>
+              The Cansat shall collect sensor data during ascent and descent and
+              transmit the data to a ground station at a 1 Hz rate. The sensor
+              data shall include interior temperature, battery voltage, battery
+              current, altitude, tilt angle, rotation rate, and GPS position.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -322,10 +358,7 @@
           <div class="resource-card">
             <h3>Flight Readiness Review Score Sheet</h3>
             <p>FRR scoring criteria.</p>
-            <a
-              href="assets/docs/competition/FRR.pdf"
-              target="_blank"
-            >
+            <a href="assets/docs/competition/FRR.pdf" target="_blank">
               <span class="download-icon">↓</span> Download PDF
             </a>
           </div>
@@ -344,7 +377,10 @@
           <div class="resource-card">
             <h3>CSV Data Score Sheet</h3>
             <p>Telemetry data formatting and scoring guidelines.</p>
-            <a href="assets/docs/competition/CSV Data Score Sheet.pdf" target="_blank">
+            <a
+              href="assets/docs/competition/CSV Data Score Sheet.pdf"
+              target="_blank"
+            >
               <span class="download-icon">↓</span> Download PDF
             </a>
           </div>
