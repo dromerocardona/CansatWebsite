@@ -1,180 +1,196 @@
-<header class="header">
-  <div class="logo-container">
-    <img src="assets/logos/CanSatLogo.png" alt="CanSat Logo" class="header-logo">
-    <div class="title">CanSat Competition</div>
-  </div>
+<nav class="menubar">
+  <header class="header">
+    <div class="logo-container">
+      <img
+        src="assets/logos/CanSatLogo.png"
+        alt="CanSat Logo"
+        class="header-logo"
+      />
+      <div class="title">CanSat Competition</div>
+    </div>
 
-  <!-- Dropdown menu for mobile devices -->
-  <input type="checkbox" id="nav-toggle" class="nav-toggle">
-  <label for="nav-toggle" class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="mission.html">Mission</a></li>
-      <li><a href="teams.html">Teams</a></li>
-      <li><a href="winners.html">Winners</a></li>
-      <li><a href="sponsors.html">Sponsors</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mission.html">Mission</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="winners.html">Winners</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+</nav>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<style scoped>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
 
-/* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 5%;
-  background-color: #232331;
-  color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* Logo */
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  flex-shrink: 0;
-}
-
-.header-logo {
-  height: 30px;
-  width: auto;
-}
-
-.title {
-  font-size: 1.55rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  white-space: nowrap;
-}
-
-/* Hamburger/dropdown menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: #ffffff;
-  transition: all 0.3s ease;
-}
-
-/* Navigation */
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 1.8rem;
-  align-items: center;
-}
-
-.navbar a {
-  color: #cccccc;
-  text-decoration: none;
-  font-size: 1.02rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  padding: 0.2rem 0;
-  white-space: nowrap;
-}
-
-.navbar a:hover {
-  color: #ffffff;
-  border-bottom: 2px solid #3498db;
-}
-
-.nav-toggle {
-  display: none;
-}
-
-/* ----- RESPONSIVE STYLING ----- */
-
-@media (max-width: 1012px) {
-  .hamburger {
+  .header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 5%;
+    background-color: #232331;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
 
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #272b6f;
-    display: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-shrink: 0;
   }
 
+  .header-logo {
+    height: 36px;
+    width: auto;
+  }
+
+  .title {
+    font-size: 1.55rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  /* Navigation */
   .navbar ul {
-    flex-direction: column;
-    gap: 0;
-    padding: 1rem 0;
-    width: 100%;
-  }
-
-  .navbar li {
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+    align-items: center;
   }
 
   .navbar a {
-    display: block;
-    padding: 0.9rem 0;
-    font-size: 1.1rem;
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 1.02rem;
+    font-weight: 500;
+    padding: 0.4rem 0;
+    transition: all 0.3s ease;
+    position: relative;
   }
 
-  /* Show menu when checked */
-  .nav-toggle:checked ~ .navbar {
-    display: flex;
+  .navbar a:hover {
+    color: #ffffff;
   }
 
-  /* Hamburger animation */
-  .nav-toggle:checked + .hamburger span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+  .navbar a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
   }
-  .nav-toggle:checked + .hamburger span:nth-child(2) {
-    opacity: 0;
-  }
-  .nav-toggle:checked + .hamburger span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-}
 
-@media (max-width: 480px) {
-  .header {
-    padding: 0.7rem 4%;
+  .navbar a:hover::after {
+    width: 100%;
   }
-  
-  .header-logo {
-    height: 36px;
+
+  .nav-toggle {
+    display: none;
   }
-  
-  .title {
-    font-size: 1.3rem;
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
   }
-}
+
+  .hamburger span {
+    width: 26px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.35s ease;
+  }
+
+  /* ----- RESPONSIVE STYLING ----- */
+
+  @media (max-width: 1012px) {
+    .hamburger {
+      display: flex;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #1e293b;
+      display: none;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-toggle:checked ~ .navbar {
+      display: block;
+    }
+
+    .navbar ul {
+      flex-direction: column;
+      gap: 0;
+      padding: 0.5rem 0;
+      margin: 0;
+    }
+
+    .navbar li {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Remove border from the last item */
+    .navbar li:last-child {
+      border-bottom: none;
+    }
+
+    .navbar a {
+      display: block;
+      padding: 1rem 0;
+      font-size: 1.15rem;
+    }
+  }
+
+  /* Smaller screens */
+  @media (max-width: 480px) {
+    .header {
+      padding: 0.7rem 4%;
+    }
+
+    .header-logo {
+      height: 32px;
+    }
+
+    .title {
+      font-size: 1.35rem;
+    }
+
+    .navbar a {
+      font-size: 1.1rem;
+      padding: 0.9rem 0;
+    }
+  }
 </style>
