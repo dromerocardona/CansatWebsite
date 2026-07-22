@@ -9,8 +9,8 @@
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@500;600&display=swap");
 
       .hero {
-        height: 50vh;
-        min-height: 200px;
+        height: auto;
+        min-height: 400px;
         background:
           linear-gradient(rgba(10, 37, 64, 0.75), rgba(10, 37, 64, 0.85)),
           url("assets/photos/CanSat_BG.JPG") center/cover no-repeat;
@@ -20,24 +20,44 @@
         text-align: center;
         color: white;
         position: relative;
+        padding-top: 80px;
       }
 
       .hero-content {
-        max-width: 800px;
-        padding: 2rem;
+        max-width: 90%;
+        padding: 2rem 1rem;
       }
 
       .hero h1 {
-        font-size: 4.5rem;
+        font-size: clamp(2rem, 8vw, 4.5rem);
         margin-bottom: 1rem;
         text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         font-family: "Space Grotesk", sans-serif;
       }
 
       .hero p {
-        font-size: 1.4rem;
+        font-size: clamp(1rem, 4vw, 1.4rem);
         margin-bottom: 2rem;
         opacity: 0.95;
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          min-height: 350px;
+          padding-top: 100px;
+        }
+
+        .hero-content {
+          padding: 1.5rem 0.75rem;
+        }
+
+        .hero h1 {
+          margin-bottom: 0.75rem;
+        }
+
+        .hero p {
+          margin-bottom: 1.5rem;
+        }
       }
 
       .btn {
@@ -166,7 +186,6 @@
             height: auto;
             display: block;
             margin: 0 auto 1rem;
-            margin-top: 2rem;
           "
         />
         <h1>CanSat Competition</h1>
