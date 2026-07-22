@@ -92,8 +92,66 @@
         border-left: 5px solid #ff6b6b;
       }
 
-      #donation {
+      .intro-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      .intro-image {
+        flex: 1 1 380px;
+        min-width: 280px;
+        text-align: center;
+      }
+
+      .intro-image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      }
+
+      .intro-text {
+        flex: 2 1 540px;
+        font-size: 1.25rem;
+        text-align: left;
+      }
+
+      .donation-section {
+        background: linear-gradient(135deg, #0a2540, #1e3a5f);
+        color: white;
+        text-align: center;
         padding: 100px 5%;
+      }
+
+      .donation-container {
+        max-width: 70%;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 3rem 2rem;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+      }
+
+      .mark-walker-image {
+        max-width: 50%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      }
+
+      .donate-btn {
+        background: #00b4d8;
+        font-size: 1.3rem;
+        padding: 18px 48px;
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        border-radius: 50px;
       }
     </style>
   </head>
@@ -118,37 +176,12 @@
 
     <!-- Introduction -->
     <section id="introduction">
-      <div
-        style="
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-items: center;
-          gap: 4rem;
-          max-width: 90%;
-          margin: 0 auto;
-        "
-      >
-        <div
-          class="intro-image"
-          style="flex: 1 1 380px; min-width: 280px; text-align: center"
-        >
-          <img
-            src="assets/photos/Launchpad.JPG"
-            alt="Launchpad"
-            style="
-              width: 100%;
-              height: 100%;
-              border-radius: 20px;
-              box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-            "
-          />
+      <div class="intro-container">
+        <div class="intro-image">
+          <img src="assets/photos/Launchpad.JPG" alt="Launchpad" />
         </div>
 
-        <div
-          class="intro-text"
-          style="flex: 2 1 540px; font-size: 1.25rem; text-align: left"
-        >
+        <div class="intro-text">
           <p style="margin-bottom: 1.5rem">
             The American Astronautical Society (AAS) has organized an annual
             student design-build-launch competition for space-related topics.
@@ -198,25 +231,8 @@
     </section>
 
     <!-- Mark Walker Donation Fund Section -->
-    <section
-      id="donation"
-      style="
-        background: linear-gradient(135deg, #0a2540, #1e3a5f);
-        color: white;
-        text-align: center;
-        padding: 100px 5%;
-      "
-    >
-      <div
-        style="
-          max-width: 70%;
-          margin: 0 auto;
-          background: rgba(255, 255, 255, 0.1);
-          padding: 3rem 2rem;
-          border-radius: 20px;
-          backdrop-filter: blur(10px);
-        "
-      >
+    <section id="donation" class="donation-section">
+      <div class="donation-container">
         <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem">
           In Memory of Mark Walker
         </h2>
@@ -224,12 +240,7 @@
           <img
             src="assets/photos/markwalker.jpg"
             alt="Mark Walker"
-            style="
-              max-width: 50%;
-              height: auto;
-              border-radius: 12px;
-              box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-            "
+            class="mark-walker-image"
           />
         </div>
         <p style="font-size: 1.3rem; margin-bottom: 2rem">
@@ -248,16 +259,7 @@
         <a
           href="https://www.paypal.com/donate/?hosted_button_id=H9FWCJJDCDAHG"
           target="_blank"
-          class="btn"
-          style="
-            background: #00b4d8;
-            font-size: 1.3rem;
-            padding: 18px 48px;
-            display: inline-block;
-            text-decoration: none;
-            color: white;
-            border-radius: 50px;
-          "
+          class="btn donate-btn"
         >
           Donate to the Fund
         </a>
