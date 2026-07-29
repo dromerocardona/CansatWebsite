@@ -1,8 +1,215 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teams</title>
-    <link rel="icon" type="image/png" href="assets/logos/CanSatLogo.png">
-</head>
+    <link rel="icon" type="image/png" href="assets/logos/CanSatLogo.png" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;600&display=swap");
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .page-header {
+      background: linear-gradient(135deg, #0a2540, #1e3a5f);
+      color: white;
+      text-align: center;
+      padding: 80px 5% 60px;
+    }
+
+    .page-header h1 {
+      font-size: 3.2rem;
+      margin: 0 0 1rem;
+    }
+
+    .page-header p {
+      font-size: 1.35rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    #teams {
+      background: white;
+      padding: 3rem 5%;
+    }
+
+    .teams-intro {
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+
+    .teams-intro p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .teams-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .team-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.12);
+    }
+
+    .team-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.4rem;
+      color: #0a2540;
+    }
+
+    .team-meta {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-bottom: 1.25rem;
+    }
+
+    .score-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .score-badge {
+      flex: 1;
+      min-width: 120px;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      text-align: center;
+    }
+
+    .score-badge .label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #64748b;
+      margin-bottom: 0.35rem;
+    }
+
+    .score-badge .value {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #0a2540;
+    }
+
+    .score-badge .value.pending {
+      font-size: 1rem;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    .score-badge.pdr .value:not(.pending) {
+      color: #0284c7;
+    }
+
+    .score-badge.cdr .value:not(.pending) {
+      color: #059669;
+    }
+
+    /* Placeholder / empty state */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: #f8fafc;
+      border-radius: 12px;
+      border: 2px dashed #cbd5e1;
+    }
+
+    .empty-state h3 {
+      margin: 0 0 0.75rem;
+      color: #0a2540;
+    }
+
+    .empty-state p {
+      margin: 0;
+      color: #64748b;
+      font-size: 1.05rem;
+    }
+
+    @media (max-width: 600px) {
+      .page-header h1 {
+        font-size: 2.4rem;
+      }
+
+      .score-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <body>
+    <!-- Page Header -->
+    <section>
+      <div class="page-header">
+        <h1>Teams</h1>
+      </div>
+    </section>
+
+    <!-- Teams list -->
+    <section id="teams">
+      <div class="teams-grid">
+        <!-- Example team card structure -->
+        <!--
+        <div class="team-card">
+          <h3>Team Name</h3>
+          <div class="team-meta">School / Organization · Team #XX</div>
+          <div class="score-row">
+            <div class="score-badge pdr">
+              <span class="label">PDR</span>
+              <span class="value">—</span>
+            </div>
+            <div class="score-badge cdr">
+              <span class="label">CDR</span>
+              <span class="value pending">Pending</span>
+            </div>
+          </div>
+        </div>
+        -->
+
+        <div class="empty-state">
+          <h3>Teams coming soon</h3>
+          <p>
+            Team listings and scores will appear here once official
+            results are released.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
 
 <script src="scripts.js"></script>
